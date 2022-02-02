@@ -5,7 +5,54 @@
         </title>
 
         <style>
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                background-color: #f1f1f1;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            #topnav{
+                background-color: #333;
+                overflow: hidden;
+            }
 
+            #topnav a{
+                color: #f2f2f2;
+                text-decoration: none;
+                display: block;
+                float: left;
+                padding: 14px 16px;
+            }
+            #topnav a:hover{
+                background-color: f2f2f2;
+                color: #333;
+            }
+
+            .card{
+                background-color: #a2b9bc;
+                padding: 20px;
+                margin-top: 20px;
+            }
+            #header, #footer{
+                text-align: center;
+            }
+            #left_column{
+                width: 70%;
+                float: left;
+            }
+            #right_column{
+                width: 30%;
+                float: right;
+                padding-left: 10px;
+            }
+            #footer{
+                clear: both;
+            }
+
+            h1, h2, h3, div{
+                margin: 0px;
+            }
         </style>
     </head>
 
@@ -13,6 +60,16 @@
         <div id="header">
             <h1>Header</h1>
             <p>Should be responsive</p>
+        </div>
+        <div id="topnav">
+                <a href="#"> Link </a>
+                
+                <a href="#"> Link </a>
+                
+                <a href="#"> Link </a>
+                
+                <a href="#" style="float: right;"> Link </a>
+
         </div>
 
         <div id="left_column">
@@ -40,7 +97,6 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab nemo iure saepe illum quia quae laudantium, maiores alias id? Dolorum ipsa facilis quisquam consequuntur quos? Eius inventore ab perspiciatis suscipit?
                 </p>
             </div>
-         
         </div>
 
         <div id="footer">
