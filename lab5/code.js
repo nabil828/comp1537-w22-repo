@@ -1,4 +1,5 @@
 function calculate_area() {
+    console.log("calculate_area () got called")
     // alert(jQuery("body").html());
     
     // alert(jQuery("#x").val());
@@ -9,6 +10,7 @@ function calculate_area() {
 }
 
 function setup() {
+    console.log("setup () got called")
     jQuery("#calc").click(calculate_area);
 }
 jQuery(document).ready(setup);
