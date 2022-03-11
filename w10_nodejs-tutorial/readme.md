@@ -1,14 +1,13 @@
 <!-- # MERN Demo (MongoDB, Express.js, React.js, and Node.js) -->
 # Node.js Tutorial
 
-
-
+* [Node.js Tutorial](#nodejs-tutorial)
 * [Introduction](#introduction)
 * [What Is Node.js?](#what-is-nodejs)
 * [Why Node.js?](#why-nodejs)
 * [What Can Node.js Do?](#what-can-nodejs-do)
-* [Node.js vs. JS](#nodejs-vsjs)
-   * [Browser vs. Server](#browser-vs-server)
+* [Node.js vs.JS](#nodejs-vsjs)
+   * [Browser Vs Server](#browser-vs-server)
 * [Install Node](#install-node)
 * [Setting up The Server](#setting-up-the-server)
 * [Express.js](#expressjs)
@@ -17,10 +16,14 @@
    * [Sending JSON](#sending-json)
       * [Sending JSON object from a file](#sending-json-object-from-a-file)
       * [Retrieve results only for valid API keys](#retrieve-results-only-for-valid-api-keys)
-* [Deploy your site to Heroku](#deploy-your-site-to-heroku)
+* [Heroku](#heroku)
+   * [Prerequisites](#prerequisites)
+* [In-class Exercise](#in-class-exercise)
+   * [Deploy your site to Heroku](#deploy-your-site-to-heroku)
 * [Client Code](#client-code)
 * [Demo](#demo)
 * [Check Your Understanding](#check-your-understanding)
+
 ---
 Check out the complete server code [here](./server/server.js) and client code [here](./client/).
 
@@ -178,7 +181,7 @@ Output:
 
 ![server replying to another route](images/3.jpg)  
 
-Here, `res.send()` method will send a text or HTML response to the client. Alternatively, you can send chunks of your response using `res.write()`s and then signal the end of the response by calling `res.send()`. Check the following example. 
+Here, `res.send()` method will send a text or HTML response to the client. Alternatively, you can send chunks of your response using `res.write()`s and then signal the end of the response by calling `res.send()`. Check the following example.
 
 ## Query String Parameters
 You may use
