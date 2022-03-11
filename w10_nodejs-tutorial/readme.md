@@ -2,13 +2,13 @@
 # Node.js Tutorial
 
 
-* [Node.js Tutorial](#nodejs-tutorial)
+
 * [Introduction](#introduction)
 * [What Is Node.js?](#what-is-nodejs)
 * [Why Node.js?](#why-nodejs)
 * [What Can Node.js Do?](#what-can-nodejs-do)
-* [Node.js vs.JS](#nodejs-vsjs)
-   * [Browser Vs Server](#browser-vs-server)
+* [Node.js vs. JS](#nodejs-vsjs)
+   * [Browser vs. Server](#browser-vs-server)
 * [Install Node](#install-node)
 * [Setting up The Server](#setting-up-the-server)
 * [Express.js](#expressjs)
@@ -55,7 +55,7 @@ Tutorial Prerequisites
 
 # Node.js vs.JS
 ## Browser Vs Server
-JavaScript is allowed us to build interactive apps by being able to access the DOM. Node.js runs on the server side to allow us to build server side apps that would serve clients apps. Furthermore, it allows us to access files and databases on the server.
+JavaScript allowed us to build interactive apps by being able to access the DOM. Node.js runs on the server side to allow us to build server side apps that would serve clients apps. Furthermore, it allows us to access files and databases on the server.
 
 # Install Node  
 > Download Node.js The official Node.js website has installation instructions for Node.js: https://nodejs.org
@@ -161,11 +161,7 @@ The second argument is a callback function the will hold the `req` variable for 
 You may even embed HTML in your response's string.
 
 ---
-- [x] [Setting up The Server](#Setting-up-the-server)
-- [ ] [Routing in Express](#Routing-in-Express)
-- [ ] [REST API - Round One](#REST-API---Round-One)
-- [ ] [MongoDB and REST API - Round Two](#MongoDB-and-REST-API---Round-Two)
-- [ ] [React and REST API - Round Three](#React-and-REST-API---Round-Three)
+
 ---
 # Routing in Express
 So far we had one route to our server. Namely, the '/' route. If we want clients to visit other ~~pages~~ routes, we can handle these requests in such a way:
