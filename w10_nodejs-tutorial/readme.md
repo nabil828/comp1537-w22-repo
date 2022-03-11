@@ -70,6 +70,8 @@ or using your OS GUI.
 Express.js is a Node.js framework that we will use to build the server app. It is defined as
   >Fast, unopinionated, minimalist web framework for Node.js
 
+It allows us to use expressjs `middleware`s which we are going to use to handle session and other web server vital tasks.
+
 - [[Source]](https://expressjs.com/en/starter/installing.html) Install Express using the following commands:
 
 ```
@@ -133,7 +135,7 @@ into your server.js .
 ```
 app.listen(5000)
 ```
-**OR** even better, add a call back function as a second argument to the previous `listen` function so we can print out any errors on the run time:
+**OR** even better, add a callback function as a second argument to the previous `listen` function so we can print out any errors on the run time:
 ```
 app.listen(5000, function(err){
   if(err) console.log(err);
@@ -176,6 +178,8 @@ Output:
 
 ![server replying to another route](images/3.jpg)  
 
+Here, `res.send()` method will send a text or HTML response to the client. Alternatively, you can send chunks of your response using `res.write()`s and then signal the end of the response by calling `res.send()`. Check the following example. 
+
 ## Query String Parameters
 You may use
 
@@ -183,7 +187,7 @@ You may use
 app.get('/', function (req, res) {
     res.write(`Weather of ${req.query["q"]} is 4.8 Celsius. `);
     res.write(`Your API key is ${req.query["appkey"]} . `);
-    res.end();
+    res.send();
 })
 ```
 to read query string parameters send by the client on the server.
@@ -383,17 +387,35 @@ if the API key provided by the client does not match the one stored in our datab
 
 
 
-# Deploy your site to Heroku
+# Heroku
+## Prerequisites
+You might need the following links:
+
+[Git installing](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+
+[Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
+
+# In-class Exercise
+Add new *route*, `/home` that will send the following html snippet to the client requests  
+
+```
+<h1> Home <h1>
+<p> This is my first web server! </p>
+
+```
+
+## Deploy your site to Heroku
 First change the listening port to
 
 ```
-app.listen(proccess.env.PORT || 5000, function (err) {
+app.listen(procces.env.PORT || 5000, function (err) {
     if (err)
         console.log(err);
 })
 ```
+so Heroku can set a port number dynamically.
 
-In the terminal in VScode, execute the folllowing  
+In the terminal in VSCode, execute the following  
 
 ```
 git init
@@ -420,12 +442,13 @@ And
 ```
 heroku login
 ```
+which is going to prompt you to login using the browser.
 
-And
-
+Next type,
 ```
 heroku create
 ```
+to create a remote repo on Heroku site.
 
 And
 
@@ -433,20 +456,15 @@ And
 git push heroku master
 ```
 
-to login.
+to sync and push the local changes to the remote ropo hosted on Heroku.com.
 
-You might need the following links:
-
-[Git installing](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-
-[Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
-
+- Check also
 [YouTube Demo](https://www.youtube.com/watch?v=27GoRa4d15c&ab_channel=Vuka)
 
 # Client Code
 Use the same client we have implement [last week](./client/).
 
-You also need to install
+You also need to install to install the following `cors` package
 
 ```
 npm install -i cors
@@ -460,11 +478,11 @@ app.use(cors());
 
 # Demo
 Server Side -
-https://sleepy-anchorage-78042.herokuapp.com/
-
-https://sleepy-anchorage-78042.herokuapp.com/?q=Vancouver
-
-https://sleepy-anchorage-78042.herokuapp.com/?q=Vancouver&appid=123456
+- Unauthorized Access
+ - https://sleepy-anchorage-78042.herokuapp.com/
+ - https://sleepy-anchorage-78042.herokuapp.com/?q=Vancouver
+- Authorized Access
+ - https://sleepy-anchorage-78042.herokuapp.com/?q=Vancouver&appid=123456
 
 Client -
 https://comp1537-nabil.netlify.app/w10_nodejs-tutorial/client/index.html
