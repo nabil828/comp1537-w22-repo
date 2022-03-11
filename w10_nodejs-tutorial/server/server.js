@@ -3,6 +3,10 @@ const app = express();
 const collection = require('./data.js');
 const valid_keys = require('./valid_keys.js');
 
+const cors = require('cors');
+app.use(cors());
+
+
 app.listen(process.env.PORT || 5000, function (err) {
     if (err)
         console.log(err);
