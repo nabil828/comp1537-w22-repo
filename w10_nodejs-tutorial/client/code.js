@@ -2,7 +2,7 @@ function procces_(data){
     console.log(data);
     jQuery('#city_temperature').html(data.object.main.temp)
     jQuery('#p1').html(data.object.weather[0].description)
-    // console.log(`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
+    console.log(`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
     jQuery('#img1').attr("src", `http://openweathermap.org/img/wn/${data.object.weather[0].icon}@2x.png`)
     $("#img1").show(); 
     $("#p1").show();
