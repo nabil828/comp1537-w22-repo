@@ -2,12 +2,9 @@
 # Node.js Tutorial
 
 Here is a list of steps we are going through this demo:
-- [ ] [Downloading and Installing Node.js] (Downloading and Installing Node.js)
+
 - [ ] [Setting up The Server](#Setting-up-the-server)
 - [ ] [Routing in Express](#Routing-in-Express)
-- [ ] [REST API - Round One](#REST-API---Round-One)
-- [ ] [MongoDB and REST API - Round Two](#MongoDB-and-REST-API---Round-Two)
-- [ ] [React and REST API - Round Three](#React-and-REST-API---Round-Three)
 
 ---
 Check out the complete server code [here](./server/server.js) and client code [here](./client/).
