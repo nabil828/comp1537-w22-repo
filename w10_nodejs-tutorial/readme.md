@@ -1,18 +1,39 @@
 <!-- # MERN Demo (MongoDB, Express.js, React.js, and Node.js) -->
 # Node.js Tutorial
 
-Here is a list of steps we are going through this demo:
 
-- [ ] [Setting up The Server](#Setting-up-the-server)
-- [ ] [Routing in Express](#Routing-in-Express)
-
+* [Node.js Tutorial](#nodejs-tutorial)
+* [Introduction](#introduction)
+* [What Is Node.js?](#what-is-nodejs)
+* [Why Node.js?](#why-nodejs)
+* [What Can Node.js Do?](#what-can-nodejs-do)
+* [Node.js vs.JS](#nodejs-vsjs)
+   * [Browser Vs Server](#browser-vs-server)
+* [Install Node](#install-node)
+* [Setting up The Server](#setting-up-the-server)
+* [Express.js](#expressjs)
+* [Routing in Express](#routing-in-express)
+   * [Query String Parameters](#query-string-parameters)
+   * [Sending JSON](#sending-json)
+      * [Sending JSON object from a file](#sending-json-object-from-a-file)
+      * [Retrieve results only for valid API keys](#retrieve-results-only-for-valid-api-keys)
+* [Deploy your site to Heroku](#deploy-your-site-to-heroku)
+* [Client Code](#client-code)
+* [Demo](#demo)
+* [Check Your Understanding](#check-your-understanding)
 ---
 Check out the complete server code [here](./server/server.js) and client code [here](./client/).
 
 ---
+
 All quotes are from w3schools.com
 
 ---
+
+Tutorial Prerequisites
+- May be download and install node.js before the class - https://nodejs.org/en/.
+- Create an account on https://www.heroku.com/ and download and install Heroku CLI - https://devcenter.heroku.com/articles/heroku-cli
+
 
 # Introduction
 > Node.js is an open source server environment.
@@ -425,7 +446,34 @@ You might need the following links:
 
 [YouTube Demo](https://www.youtube.com/watch?v=27GoRa4d15c&ab_channel=Vuka)
 
-## Check Your Understanding
+# Client Code
+Use the same client we have implement [last week](./client/).
+
+You also need to install
+
+```
+npm install -i cors
+```
+and add the following to the server code before your routes to force the server to bypass some security checks.
+
+```
+const cors = require('cors');
+app.use(cors());
+```
+
+# Demo
+Server Side -
+https://sleepy-anchorage-78042.herokuapp.com/
+
+https://sleepy-anchorage-78042.herokuapp.com/?q=Vancouver
+
+https://sleepy-anchorage-78042.herokuapp.com/?q=Vancouver&appid=123456
+
+Client -
+https://comp1537-nabil.netlify.app/w10_nodejs-tutorial/client/index.html
+
+
+# Check Your Understanding
 Choose all that apply:
 - Express allows you to configure middleware to respond to HTTP requests.
 - Express allows you to define a routing table that can work according to the HTTP method and the URL.
