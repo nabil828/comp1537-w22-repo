@@ -67,7 +67,7 @@ JavaScript allowed us to build interactive apps by being able to access the DOM.
 # Setting up The Server
 - Create a `server` directory using the followig terminal command:
     `nabil828@DESKTOP-0AB0QNR:~/mern_demo$ mkdir server`.
-or using your OS GUI.
+Or use your OS GUI.
 
 # Express.js
 Express.js is a Node.js framework that we will use to build the server app. It is defined as
