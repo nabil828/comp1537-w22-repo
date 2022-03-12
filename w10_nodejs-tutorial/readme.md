@@ -461,7 +461,7 @@ git push heroku master
 
 to sync and push local changes to the remote repo hosted on Heroku.com.
 
-- Check also
+- Check also this 
 [YouTube Demo](https://www.youtube.com/watch?v=27GoRa4d15c&ab_channel=Vuka)
 
 # Client Code
@@ -472,7 +472,7 @@ You also need to install the following `cors` package
 ```
 npm install -i cors
 ```
-and add the following to the server code before your routes to force the server to bypass some security checks. 
+and add the following to the server code before your routes to force the server to bypass some security checks.
 
 ```
 const cors = require('cors');
