@@ -123,7 +123,7 @@ npm WARN server@1.0.0 No repository field.
 added 50 packages from 37 contributors and audited 50 packages in 4.488s
 found 0 vulnerabilities
 ```
-- Open the server folder using atom `atom ~/mern_demo/server` and create a new file `server.js`
+- Open the server folder using VSCode `atom ~/mern_demo/server` and create a new file `server.js`
 
 - Change the entry point to `server.js` in the `package.josn` file. This the home page of the server when it the http://localhost:port url s requested.  
 
@@ -411,7 +411,7 @@ Add new *route*, `/home` that will send the following html snippet to the client
 First change the listening port to
 
 ```
-app.listen(procces.env.PORT || 5000, function (err) {
+app.listen(proess.env.PORT || 5000, function (err) {
     if (err)
         console.log(err);
 })
