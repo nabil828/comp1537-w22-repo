@@ -19,7 +19,7 @@
 * [Heroku](#heroku)
    * [Prerequisites](#prerequisites)
 * [In-class Exercise](#in-class-exercise)
-   * [Deploy your site to Heroku](#deploy-your-site-to-heroku)
+* [Deploy your site to Heroku](#deploy-your-site-to-heroku)
 * [Client Code](#client-code)
 * [Demo](#demo)
 * [Check Your Understanding](#check-your-understanding)
