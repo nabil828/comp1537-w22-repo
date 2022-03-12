@@ -392,7 +392,7 @@ If the API key provided by the client does not match the one stored in our datab
 
 # Heroku
 ## Prerequisites
-You might need the following links:
+You might need the following installed:
 
 [Git installing](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
@@ -461,7 +461,7 @@ git push heroku master
 
 to sync and push local changes to the remote repo hosted on Heroku.com.
 
-- Check also this 
+- Check also this
 [YouTube Demo](https://www.youtube.com/watch?v=27GoRa4d15c&ab_channel=Vuka)
 
 # Client Code
