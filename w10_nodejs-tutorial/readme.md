@@ -407,7 +407,7 @@ Add new *route*, `/home` that will send the following html snippet to the client
 
 ```
 
-## Deploy your site to Heroku
+# Deploy your site to Heroku
 First change the listening port to
 
 ```
