@@ -384,7 +384,7 @@ app.get('/', function (req, res) {
 })
 ```
 
-if the API key provided by the client does not match the one stored in our database/file, the `400` error will be send back to the user. Another, option is to send back an empty JSON object.
+If the API key provided by the client does not match the one stored in our database/file, the `400` error will be send back to the user. Another, option is to send back an empty JSON object.
 
 
 
