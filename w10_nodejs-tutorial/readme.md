@@ -459,20 +459,20 @@ And
 git push heroku master
 ```
 
-to sync and push the local changes to the remote ropo hosted on Heroku.com.
+to sync and push local changes to the remote repo hosted on Heroku.com.
 
 - Check also
 [YouTube Demo](https://www.youtube.com/watch?v=27GoRa4d15c&ab_channel=Vuka)
 
 # Client Code
-Use the same client we have implement [last week](./client/).
+Use the same client we have implement [last week](./client/). Notice the change in the `url` to point to our new Heroku link of our web server instead of openweathermap.org.
 
-You also need to install to install the following `cors` package
+You also need to install the following `cors` package
 
 ```
 npm install -i cors
 ```
-and add the following to the server code before your routes to force the server to bypass some security checks.
+and add the following to the server code before your routes to force the server to bypass some security checks. 
 
 ```
 const cors = require('cors');
