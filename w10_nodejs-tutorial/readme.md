@@ -30,7 +30,7 @@ Check out the complete server code [here](./server/server.js) and client code [h
 ---
 
 All quotes are from w3schools.com.
-Also, check this [node.js YouTube course](https://www.youtube.com/watch?v=Oe421EPjeBE&t=19716s&ab_channel=freeCodeCamp.org) for detailed explanation of node.js
+Also, check this [node.js YouTube course](https://www.youtube.com/watch?v=Oe421EPjeBE&t=19716s&ab_channel=freeCodeCamp.org) for a detailed tutorial of node.js
 
 ---
 
