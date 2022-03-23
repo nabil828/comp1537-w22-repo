@@ -36,26 +36,64 @@ function display_back_drop() {
 function header_button(){
     w = $(this).attr("id");
     $("#results").html(`<h1> display (${w}, page size)</h1>`)
+    current_page_id = Number(w);
+
+    
+   $("#next").show();
+   
+   $("#prev").show();
 }
 
 function first(){
     $("#results").html(`<h1> display (1, page size)</h1>`)
+    current_page_id = 1;
+
+    $("#next").show();
+   
+    $("#prev").show();
 }
 
 
 function last(){
     $("#results").html(`<h1> display (7, page size)</h1>`)
+    current_page_id = 7;
+    $("#next").show();
+   
+    $("#prev").show();
+}
+
+function next(){
+    if(current_page_id < 7)
+        current_page_id++;
+    $("#results").html(`<h1> display (${current_page_id}, page size)</h1>`)
+}
+
+function prev(){
+    if(current_page_id > 1)
+        current_page_id--;
+    
+    $("#results").html(`<h1> display (${current_page_id}, page size)</h1>`)
 }
 function setup() {
    $("#find_movie_info").click(call_ajax)
     // $("body").click(()=>{alert()});
    $("body").on("click",".backdrop_button" ,display_back_drop)
 
-   $("header button").click(header_button);
+   $(".numbered_buttons").click(header_button);
 
    $("#first").click(first);
    
    $("#last").click(last);
+
+   $("#next").click(next);
+   
+   $("#prev").click(prev);
+
+   
+   $("#next").hide();
+   
+   $("#prev").hide();
+
 }
 
 jQuery(document).ready(setup)
