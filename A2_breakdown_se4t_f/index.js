@@ -1,8 +1,18 @@
 current_page_id = null;
+number_of_pages = null;
+
+function paginate_menu(){
+    $("header").show();
+    $("#numbered_buttons_id").empty()
+    for(i = 1; i <= number_of_pages; i++){
+        x = `<button id="${i}" class="numbered_buttons"> ${i} </button>`;
+        $("#numbered_buttons_id").append(x)
+    }
+}
 
 
 function process_response(data) {
-
+    number_of_pages = Math.ceil(data.results.length / 3);
     for (i = 0; i < data.results.length; i++) {
 
         $("#results").append(data.results[i].original_title + "<br>");
@@ -15,6 +25,9 @@ function process_response(data) {
         z = `<button id="${data.results[i].backdrop_path}" class="backdrop_button"> backdrop image!</button>`
         $("#results").append(z + "<br>");
     }
+
+    // inject the buttons 
+    paginate_menu();
 
 }
 function call_ajax(){
@@ -79,7 +92,7 @@ function setup() {
     // $("body").click(()=>{alert()});
    $("body").on("click",".backdrop_button" ,display_back_drop)
 
-   $(".numbered_buttons").click(header_button);
+   $("body").on("click", ".numbered_buttons", header_button);
 
    $("#first").click(first);
    
@@ -93,6 +106,8 @@ function setup() {
    $("#next").hide();
    
    $("#prev").hide();
+
+   $("header").hide();
 
 }
 
