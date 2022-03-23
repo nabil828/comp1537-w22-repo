@@ -1,7 +1,17 @@
 current_page_id = null;
 number_of_pages = null;
+page_size = null;
+received_object = null;
 
+
+display(page_id, page_size){
+    
+    // $("#results").html(`<h1> display (1, ${page_size})</h1>`);
+    
+    
+}
 function paginate_menu(){
+    number_of_pages =  Math.ceil(received_object.results.length / page_size);
     $("header").show();
     $("#numbered_buttons_id").empty()
     for(i = 1; i <= number_of_pages; i++){
@@ -12,7 +22,7 @@ function paginate_menu(){
 
 
 function process_response(data) {
-    number_of_pages = Math.ceil(data.results.length / 3);
+    received_object = data;
     for (i = 0; i < data.results.length; i++) {
 
         $("#results").append(data.results[i].original_title + "<br>");
@@ -48,7 +58,7 @@ function display_back_drop() {
 }
 function header_button(){
     w = $(this).attr("id");
-    $("#results").html(`<h1> display (${w}, page size)</h1>`)
+    $("#results").html(`<h1> display (${w}, ${page_size})</h1>`)
     current_page_id = Number(w);
 
     
@@ -58,17 +68,19 @@ function header_button(){
 }
 
 function first(){
-    $("#results").html(`<h1> display (1, page size)</h1>`)
+    $("#results").html(`<h1> display (1, ${page_size})</h1>`)
     current_page_id = 1;
 
     $("#next").show();
    
     $("#prev").show();
+
+    display(1, page_size);
 }
 
 
 function last(){
-    $("#results").html(`<h1> display (7, page size)</h1>`)
+    $("#results").html(`<h1> display(7, ${page_size})</h1>`)
     current_page_id = 7;
     $("#next").show();
    
@@ -78,15 +90,24 @@ function last(){
 function next(){
     if(current_page_id < 7)
         current_page_id++;
-    $("#results").html(`<h1> display (${current_page_id}, page size)</h1>`)
+    $("#results").html(`<h1> display (${current_page_id}, ${page_size})</h1>`)
+
+    display(current_page_id, page_size);
 }
 
 function prev(){
     if(current_page_id > 1)
         current_page_id--;
     
-    $("#results").html(`<h1> display (${current_page_id}, page size)</h1>`)
+    $("#results").html(`<h1> display (${current_page_id}, ${page_size})</h1>`)
 }
+
+function drop_down_menu_has_changed(){
+    page_size = $(this).val();
+    page_size = Number(page_size);
+    paginate_menu();
+}
+
 function setup() {
    $("#find_movie_info").click(call_ajax)
     // $("body").click(()=>{alert()});
@@ -107,7 +128,10 @@ function setup() {
    
    $("#prev").hide();
 
-   $("header").hide();
+//    $("header").hide();
+
+   $("select").change(drop_down_menu_has_changed);
+    page_size = Number($("option:selected").val());
 
 }
 
