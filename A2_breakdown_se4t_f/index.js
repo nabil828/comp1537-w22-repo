@@ -1,3 +1,6 @@
+current_page_id = null;
+
+
 function process_response(data) {
 
     for (i = 0; i < data.results.length; i++) {
@@ -35,12 +38,24 @@ function header_button(){
     $("#results").html(`<h1> display (${w}, page size)</h1>`)
 }
 
+function first(){
+    $("#results").html(`<h1> display (1, page size)</h1>`)
+}
+
+
+function last(){
+    $("#results").html(`<h1> display (7, page size)</h1>`)
+}
 function setup() {
    $("#find_movie_info").click(call_ajax)
     // $("body").click(()=>{alert()});
    $("body").on("click",".backdrop_button" ,display_back_drop)
 
-   $("header button").click(header_button)
+   $("header button").click(header_button);
+
+   $("#first").click(first);
+   
+   $("#last").click(last);
 }
 
 jQuery(document).ready(setup)
