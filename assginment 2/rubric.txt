@@ -1,0 +1,13 @@
+Out of 10:
+- [1] Pagination controls are hidden by default and visible upon displying search result
+
+- [1] Display the correct number of pages for each search term 
+- [1] Display the correct movie number in the page
+
+- [1] Prev/Next are limited to first and last pages 
+- [1] Prev/Next buttons are hidden by default and visible upon page selection
+
+- [2] Selection of page will display the proper set of movies in a page
+- [3] Changing the page size will 
+	- reload the page with the same page number but with a different size of it
+	- reconstruct the pagination controls 
